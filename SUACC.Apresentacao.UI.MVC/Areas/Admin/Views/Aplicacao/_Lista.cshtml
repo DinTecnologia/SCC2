@@ -1,0 +1,58 @@
+﻿@model  IEnumerable<SUACC.Aplicacao.ViewModel.AplicacaoListaViewModel>
+
+<div class="panel panel-flat">
+
+    @if (Model.Any())
+    {
+        <table class="table datatable-basic">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Url</th>
+                    <th>Ssl</th>
+                    <th>Criado Em</th>
+                    <th>Criado Por</th>
+                    <th>Atualizado Em</th>
+                    <th>Atualizado Por</th>
+                    <th>Status</th>
+                    <th class="text-center">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var aplicacao in Model)
+                {
+                    <tr>
+                        <td>@aplicacao.Nome</td>
+                        <td>@aplicacao.Url</td>
+                        <td>@aplicacao.Ssl</td>
+                        <td>@aplicacao.CriadoEm</td>
+                        <td>@aplicacao.CriadoPor</td>
+                        <td>@aplicacao.AtualizadoEm</td>
+                        <td>@aplicacao.AtualizadoPor</td>
+                        <td>@aplicacao.Status</td>
+                        <td class="text-center">
+                            <ul class="icons-list">
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        <i class="icon-menu9"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li><a href="#"><i class="icon-file-pdf"></i> Editar</a></li>
+                                        <li><a href="#"><i class="icon-file-excel"></i> Excluir</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <span>Nenhuma Aplicação Cadastrada</span>
+    }
+
+</div>
+

@@ -1,0 +1,55 @@
+﻿@using SUACC.Apresentacao.UI.MVC.Models
+@model LoginViewModel
+@{
+    Layout = "~/Views/Shared/_LayoutLimpo.cshtml"; 
+}
+
+
+<div class="content">
+    <!-- Simple login form -->
+    @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="panel panel-body login-form">
+            <div class="text-center">
+                <div class="icon-object border-slate-300 text-slate-300"><i class="icon-reading"></i></div>
+                <h5 class="content-group">Faça login na sua conta <small class="display-block">Insira suas credenciais abaixo</small></h5>
+            </div>
+            <div class="form-group has-feedback has-feedback-left">
+                @Html.TextBoxFor(m => m.Login, new { @class = "form-control", @placeholder = "Login" })
+                @Html.ValidationMessageFor(m => m.Login, "", new { @class = "text-danger" })
+                <div class="form-control-feedback">
+                    <i class="icon-user text-muted"></i>
+                </div>
+            </div>
+            <div class="form-group has-feedback has-feedback-left">
+                @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Password" })
+                @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                <div class="form-control-feedback">
+                    <i class="icon-lock2 text-muted"></i>
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block">Entrar <i class="icon-circle-right2 position-right"></i></button>
+            </div>
+            <div class="text-center">
+                <a href="/Account/ForgotPassword">Esqueci minha senha?</a>
+            </div>
+        </div>
+    }
+    <!-- /simple login form -->
+    <!-- Footer -->
+    <div class="footer text-muted text-center">
+        &copy; 2018. <a href="#">SUACC</a> by <a href="#" target="_blank">Thiago H. Din</a>
+    </div>
+    <!-- /footer -->
+</div>
+
+
+<script type="text/javascript">
+    $(function () {
+        $('body').addClass("login-container");
+    });
+</script>

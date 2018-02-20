@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SUACC - Sistema Único de Atendimento Call Center</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+    @Styles.Render("~/Content/globalcss")
+    @Scripts.Render("~/Content/globaljs")
+
+</head>
+<body>    
+    <!-- Page container -->
+    <div class="page-container">
+        <!-- Page content -->
+        <div class="page-content">           
+            
+            <!-- /main sidebar -->
+            <!-- Main content -->
+            <div class="content-wrapper">
+
+                @RenderBody()
+
+            </div>
+            <!-- /main content -->
+        </div>
+        <!-- /page content -->
+    </div>
+    <!-- /page container -->
+
+    @Scripts.Render("~/Content/globalthemajs")
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>
+

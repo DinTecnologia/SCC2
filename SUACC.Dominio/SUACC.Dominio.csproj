@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EA3D3A06-2E6F-415C-95C7-05A451C97167}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SUACC.Dominio</RootNamespace>
+    <AssemblyName>SUACC.Dominio</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entidades\Anotacao.cs" />
+    <Compile Include="Entidades\Aplicacao.cs" />
+    <Compile Include="Entidades\Area.cs" />
+    <Compile Include="Entidades\Arquivo.cs" />
+    <Compile Include="Entidades\AspNetRole.cs" />
+    <Compile Include="Entidades\AspNetUser.cs" />
+    <Compile Include="Entidades\AspNetUserClaim.cs" />
+    <Compile Include="Entidades\AspNetUserLogin.cs" />
+    <Compile Include="Entidades\Atendimento.cs" />
+    <Compile Include="Entidades\AtendimentoInteracao.cs" />
+    <Compile Include="Entidades\Atividade.cs" />
+    <Compile Include="Entidades\AtividadeEnvolvido.cs" />
+    <Compile Include="Entidades\AtividadeTipo.cs" />
+    <Compile Include="Entidades\Campanha.cs" />
+    <Compile Include="Entidades\CampoDinamico.cs" />
+    <Compile Include="Entidades\CampoDinamicoOpcao.cs" />
+    <Compile Include="Entidades\CampoDinamicoPreenchido.cs" />
+    <Compile Include="Entidades\Canal.cs" />
+    <Compile Include="Entidades\Cidade.cs" />
+    <Compile Include="Entidades\Classificacao.cs" />
+    <Compile Include="Entidades\Cliente.cs" />
+    <Compile Include="Entidades\ClienteEndereco.cs" />
+    <Compile Include="Entidades\Configuracao.cs" />
+    <Compile Include="Entidades\Contrato.cs" />
+    <Compile Include="Entidades\Email.cs" />
+    <Compile Include="Entidades\EmailAnexo.cs" />
+    <Compile Include="Entidades\EmailConta.cs" />
+    <Compile Include="Entidades\EmailModelo.cs" />
+    <Compile Include="Entidades\Entidade.cs" />
+    <Compile Include="Entidades\EntidadeCampoValor.cs" />
+    <Compile Include="Entidades\EntidadeSecaoAba.cs" />
+    <Compile Include="Entidades\EntidadeSecaoAbaCampoDinamico.cs" />
+    <Compile Include="Entidades\EntidadeSecao.cs" />
+    <Compile Include="Entidades\Especificacao\Aplicacoes\AplicacaoNomeNaoPodeSerNuloOuEmBrancoSpecification.cs" />
+    <Compile Include="Entidades\Fila.cs" />
+    <Compile Include="Entidades\FilaAtividade.cs" />
+    <Compile Include="Entidades\Funcionalidade.cs" />
+    <Compile Include="Entidades\Ligacao.cs" />
+    <Compile Include="Entidades\Mailing.cs" />
+    <Compile Include="Entidades\Menu.cs" />
+    <Compile Include="Entidades\Motivo.cs" />
+    <Compile Include="Entidades\MotivoClassificacaoFila.cs" />
+    <Compile Include="Entidades\MotivoClassificacao.cs" />
+    <Compile Include="Entidades\MotivoPausa.cs" />
+    <Compile Include="Entidades\Ocorrencia.cs" />
+    <Compile Include="Entidades\Remessa.cs" />
+    <Compile Include="Entidades\Tarefa.cs" />
+    <Compile Include="Entidades\Telefone.cs" />
+    <Compile Include="Entidades\Token.cs" />
+    <Compile Include="Entidades\Turno.cs" />
+    <Compile Include="Entidades\UsuarioCampanha.cs" />
+    <Compile Include="Entidades\UsuarioPausa.cs" />
+    <Compile Include="Entidades\UsuarioTelefonia.cs" />
+    <Compile Include="Entidades\Validacao\Aplicacoes\AplicacaoEstaConsistenteValidation.cs" />
+    <Compile Include="Entidades\ValuesObject\Canal.cs" />
+    <Compile Include="Interfaces\Especificacoes\ISpecification.cs" />
+    <Compile Include="Interfaces\Repositorio\IAreaRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorio\IArquivoRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorio\IAspNetRoleRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorio\IAspNetUserRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorio\IAspNetUserClaimRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorio\IAspNetUserLoginRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorio\IAtendimentoRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorio\IAtendimentoInteracaoRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorio\IAtividadeRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorio\IAtividadeEnvolvidoRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorio\IAtividadeTipoRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorio\ICampanhaRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorio\ICampoDinamicoRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorio\ICampoDinamicoOpcaoRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorio\ICampoDinamicoPreenchidoRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorio\ICanalRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorio\ICidadeRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorio\IClassificacaoRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorio\IClienteRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorio\IClienteEnderecoRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorio\Comum\IRepositorio.cs.cs" />
+    <Compile Include="Interfaces\Repositorio\IConfiguracaoRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorio\IContratoRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorio\IEmailRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorio\IEmailAnexoRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorio\IEmailContaRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorio\IEmailModeloRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorio\IEntidadeRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorio\IEntidadeCampoValorRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorio\IEntidadeSecaoRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorio\IEntidadeSecaoAbaRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorio\IEntidadeSecaoAbaCampoDinamicoRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorio\IFilaRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorio\IFilaAtividadeRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorio\IFuncionalidadeRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorio\IAnotacaoRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorio\IAplicacaoRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorio\ILigacaoRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorio\IMailingRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorio\IMenuRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorio\IMotivoRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorio\IMotivoClassificacaoRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorio\IMotivoClassificacaoFilaRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorio\IMotivoPausaRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorio\IOcorrenciaRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorio\IRemessaRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorio\ITarefaRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorio\ITelefoneRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorio\ITokenRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorio\ITurnoRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorio\IUsuarioCampanhaRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorio\IUsuarioPausaRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorio\IUsuarioTelefoniaRepositorio.cs" />
+    <Compile Include="Interfaces\Servicos\Comum\IServico.cs" />
+    <Compile Include="Interfaces\Servicos\IAnotacaoServico.cs" />
+    <Compile Include="Interfaces\Servicos\IAplicacaoServico.cs" />
+    <Compile Include="Interfaces\Servicos\IAreaServico.cs" />
+    <Compile Include="Interfaces\Servicos\IArquivoServico.cs" />
+    <Compile Include="Interfaces\Servicos\IAspNetRoleServico.cs" />
+    <Compile Include="Interfaces\Servicos\IAspNetUserClaimServico.cs" />
+    <Compile Include="Interfaces\Servicos\IAspNetUserLoginServico.cs" />
+    <Compile Include="Interfaces\Servicos\IAspNetUserServico.cs" />
+    <Compile Include="Interfaces\Servicos\IAtendimentoInteracaoServico.cs" />
+    <Compile Include="Interfaces\Servicos\IAtendimentoServico.cs" />
+    <Compile Include="Interfaces\Servicos\IAtividadeEnvolvidoServico.cs" />
+    <Compile Include="Interfaces\Servicos\IAtividadeServico.cs" />
+    <Compile Include="Interfaces\Servicos\IAtividadeTipoServico.cs" />
+    <Compile Include="Interfaces\Servicos\ICampanhaServico.cs" />
+    <Compile Include="Interfaces\Servicos\ICampoDinamicoOpcaoServico.cs" />
+    <Compile Include="Interfaces\Servicos\ICampoDinamicoPreenchidoServico.cs" />
+    <Compile Include="Interfaces\Servicos\ICampoDinamicoServico.cs" />
+    <Compile Include="Interfaces\Servicos\ICanalServico.cs" />
+    <Compile Include="Interfaces\Servicos\ICidadeServico.cs" />
+    <Compile Include="Interfaces\Servicos\IClassificacaoServico.cs" />
+    <Compile Include="Interfaces\Servicos\IClienteEnderecoServico.cs" />
+    <Compile Include="Interfaces\Servicos\IClienteServico.cs" />
+    <Compile Include="Interfaces\Servicos\IConfiguracaoServico.cs" />
+    <Compile Include="Interfaces\Servicos\IContratoServico.cs" />
+    <Compile Include="Interfaces\Servicos\IEmailAnexoServico.cs" />
+    <Compile Include="Interfaces\Servicos\IEmailContaServico.cs" />
+    <Compile Include="Interfaces\Servicos\IEmailModeloServico.cs" />
+    <Compile Include="Interfaces\Servicos\IEmailServico.cs" />
+    <Compile Include="Interfaces\Servicos\IEntidadeCampoServico.cs" />
+    <Compile Include="Interfaces\Servicos\IEntidadeServico.cs" />
+    <Compile Include="Interfaces\Servicos\IEntidadeSecaoAbaCampoDinamicoServico.cs" />
+    <Compile Include="Interfaces\Servicos\IEntidadeSecaoAbaServico.cs" />
+    <Compile Include="Interfaces\Servicos\IEntidadeSecaoServico.cs" />
+    <Compile Include="Interfaces\Servicos\IFilaAtividadeServico.cs" />
+    <Compile Include="Interfaces\Servicos\IFilaServico.cs" />
+    <Compile Include="Interfaces\Servicos\IFuncionalidadeServico.cs" />
+    <Compile Include="Interfaces\Servicos\ILigacaoServico.cs" />
+    <Compile Include="Interfaces\Servicos\IMailingServico.cs" />
+    <Compile Include="Interfaces\Servicos\IMenuServico.cs" />
+    <Compile Include="Interfaces\Servicos\IMotivoClassificacaoFilaServico.cs" />
+    <Compile Include="Interfaces\Servicos\IMotivoClassificacaoServico.cs" />
+    <Compile Include="Interfaces\Servicos\IMotivoPausaServico.cs" />
+    <Compile Include="Interfaces\Servicos\IMotivoServico.cs" />
+    <Compile Include="Interfaces\Servicos\IOcorrenciaServico.cs" />
+    <Compile Include="Interfaces\Servicos\IRemessaServico.cs" />
+    <Compile Include="Interfaces\Servicos\ITarefaServico.cs" />
+    <Compile Include="Interfaces\Servicos\ITelefoneServico.cs" />
+    <Compile Include="Interfaces\Servicos\ITokenServico.cs" />
+    <Compile Include="Interfaces\Servicos\ITurnoServico.cs" />
+    <Compile Include="Interfaces\Servicos\IUsuarioCampanhaServico.cs" />
+    <Compile Include="Interfaces\Servicos\IUsuarioPausaServico.cs" />
+    <Compile Include="Interfaces\Servicos\IUsuarioTelefoniaServico.cs" />
+    <Compile Include="Interfaces\Validacoes\ISelfValidation.cs" />
+    <Compile Include="Interfaces\Validacoes\IValidation.cs" />
+    <Compile Include="Interfaces\Validacoes\IValidationRule.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicos\AplicacaoServico.cs" />
+    <Compile Include="Servicos\AtendimentoServico.cs" />
+    <Compile Include="Servicos\Comum\Servico.cs" />
+    <Compile Include="Servicos\AnotacaoServico.cs" />
+    <Compile Include="Servicos\AreaServico.cs" />
+    <Compile Include="Servicos\ArquivoServico.cs" />
+    <Compile Include="Servicos\AspNetRoleServico.cs" />
+    <Compile Include="Servicos\AspNetUserClaimServico.cs" />
+    <Compile Include="Servicos\AspNetUserLoginServico.cs" />
+    <Compile Include="Servicos\AspNetUserServico.cs" />
+    <Compile Include="Servicos\AtendimentoInteracaoServico.cs" />
+    <Compile Include="Servicos\AtividadeEnvolvidoServico.cs" />
+    <Compile Include="Servicos\AtividadeServico.cs" />
+    <Compile Include="Servicos\AtividadeTipoServico.cs" />
+    <Compile Include="Servicos\CampanhaServico.cs" />
+    <Compile Include="Servicos\CampoDinamicoOpcaoServico.cs" />
+    <Compile Include="Servicos\CampoDinamicoPreenchidoServico.cs" />
+    <Compile Include="Servicos\CampoDinamicoServico.cs" />
+    <Compile Include="Servicos\CanalServico.cs" />
+    <Compile Include="Servicos\CidadeServico.cs" />
+    <Compile Include="Servicos\ClassificacaoServico.cs" />
+    <Compile Include="Servicos\ClienteEnderecoServico.cs" />
+    <Compile Include="Servicos\ClienteServico.cs" />
+    <Compile Include="Servicos\ConfiguracaoServico.cs" />
+    <Compile Include="Servicos\ContratoServico.cs" />
+    <Compile Include="Servicos\EmailAnexoServico.cs" />
+    <Compile Include="Servicos\EmailContaServico.cs" />
+    <Compile Include="Servicos\EmailModeloServico.cs" />
+    <Compile Include="Servicos\EmailServico.cs" />
+    <Compile Include="Servicos\EntidadeCampoServico.cs" />
+    <Compile Include="Servicos\EntidadeSecaoAbaCampoDinamicoServico.cs" />
+    <Compile Include="Servicos\EntidadeSecaoAbaServico.cs" />
+    <Compile Include="Servicos\EntidadeSecaoServico.cs" />
+    <Compile Include="Servicos\EntidadeServico.cs" />
+    <Compile Include="Servicos\FilaAtividadeServico.cs" />
+    <Compile Include="Servicos\FilaServico.cs" />
+    <Compile Include="Servicos\FuncionalidadeServico.cs" />
+    <Compile Include="Servicos\MailingServico.cs" />
+    <Compile Include="Servicos\MenuServico.cs" />
+    <Compile Include="Servicos\MotivoClassificacaoFilaServico.cs" />
+    <Compile Include="Servicos\MotivoClassificacaoServico.cs" />
+    <Compile Include="Servicos\MotivoPausaServico.cs" />
+    <Compile Include="Servicos\MotivoServico.cs" />
+    <Compile Include="Servicos\OcorrenciaServico.cs" />
+    <Compile Include="Servicos\RemessaServico.cs" />
+    <Compile Include="Servicos\TarefaServico.cs" />
+    <Compile Include="Servicos\TelefoneServico.cs" />
+    <Compile Include="Servicos\TokenServico.cs" />
+    <Compile Include="Servicos\TurnoServico.cs" />
+    <Compile Include="Servicos\UsuarioCampanhaServico.cs" />
+    <Compile Include="Servicos\UsuarioPausaServico.cs" />
+    <Compile Include="Servicos\UsuarioTelefoniaServico.cs" />
+    <Compile Include="Servicos\LigacaoServico.cs" />
+    <Compile Include="Validacoes\Validation.cs" />
+    <Compile Include="Validacoes\ValidationError.cs" />
+    <Compile Include="Validacoes\ValidationResult.cs" />
+    <Compile Include="Validacoes\ValidationRule.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

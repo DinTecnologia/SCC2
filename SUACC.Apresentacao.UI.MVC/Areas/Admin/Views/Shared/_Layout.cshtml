@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SUACC - Sistema Único de Atendimento Call Center</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+    @Styles.Render("~/Content/globalcss")
+    @Scripts.Render("~/Content/globaljs")
+
+</head>
+<body>
+    <!-- Main navbar -->
+    <div class="navbar navbar-inverse">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html"><img src="assets/images/logo_light.png" alt=""></a>
+            <ul class="nav navbar-nav visible-xs-block">
+                <li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-tree5"></i></a></li>
+                <li><a class="sidebar-mobile-main-toggle"><i class="icon-paragraph-justify3"></i></a></li>
+            </ul>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-mobile">
+            <ul class="nav navbar-nav">
+                <li><a class="sidebar-control sidebar-main-toggle hidden-xs"><i class="icon-paragraph-justify3"></i></a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown dropdown-user">
+                    <a class="dropdown-toggle" data-toggle="dropdown">
+                        <img src="assets/images/placeholder.jpg" alt="">
+                        <span>Victoria</span>
+                        <i class="caret"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <li><a href="#"><i class="icon-user-plus"></i> My profile</a></li>
+                        <li><a href="#"><i class="icon-coins"></i> My balance</a></li>
+                        <li><a href="#"><span class="badge bg-teal-400 pull-right">58</span> <i class="icon-comment-discussion"></i> Messages</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#"><i class="icon-cog5"></i> Account settings</a></li>
+                        <li><a href="#"><i class="icon-switch2"></i> Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- /main navbar -->
+    <!-- Page container -->
+    <div class="page-container">
+        <!-- Page content -->
+        <div class="page-content">
+            <!-- Main sidebar -->
+            <div class="sidebar sidebar-main">
+                <div class="sidebar-content">
+                    <!-- Main navigation -->
+                    <div class="sidebar-category sidebar-category-visible">
+                        <div class="category-content no-padding">
+                            <ul class="navigation navigation-main navigation-accordion">
+                                <!-- Main -->
+                                <li><a href="~/Admin/Home/Index"><i class="icon-home4"></i> <span>Dashboard</span></a></li>
+                                <li>
+                                    <a href="#"><i class="icon-stack2"></i> <span>Parametrização</span></a>
+                                    <ul>
+                                        <li><a href="~/Admin/Aplicacao/Index">Aplicacao</a></li>
+                                        @*<li><a href="layout_navbar_sidebar_fixed.html">Fixed navbar &amp; sidebar</a></li>
+                                            <li><a href="layout_sidebar_fixed_native.html">Fixed sidebar native scroll</a></li>
+                                            <li><a href="layout_navbar_hideable.html">Hideable navbar</a></li>
+                                            <li><a href="layout_navbar_hideable_sidebar.html">Hideable &amp; fixed sidebar</a></li>
+                                            <li><a href="layout_footer_fixed.html">Fixed footer</a></li>
+                                            <li class="navigation-divider"></li>
+                                            <li><a href="boxed_default.html">Boxed with default sidebar</a></li>
+                                            <li><a href="boxed_mini.html">Boxed with mini sidebar</a></li>
+                                            <li><a href="boxed_full.html">Boxed full width</a></li>*@
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /main navigation -->
+                </div>
+            </div>
+            <!-- /main sidebar -->
+            <!-- Main content -->
+            <div class="content-wrapper">
+
+                @RenderBody()
+
+            </div>
+            <!-- /main content -->
+        </div>
+        <!-- /page content -->
+    </div>
+    <!-- /page container -->
+    <!-- Vertical form modal -->
+    <div id="modal_form_vertical" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h5 class="modal-title">Vertical form</h5>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- /vertical form modal -->
+
+
+
+    @Scripts.Render("~/Content/globalthemajs")
+
+    <script type="text/javascript" src="~/Content/assets/js/plugins/notifications/bootbox.min.js"></script>
+
+
+    <!-- Theme JS files -->
+
+    <script type="text/javascript" src="~/Content/assets/js/pages/form_checkboxes_radios.js"></script>
+    <script type="text/javascript" src="~/Content/assets/js/plugins/notifications/sweet_alert.min.js"></script>
+    <script type="text/javascript" src="~/Content/assets/js/plugins/forms/selects/select2.min.js"></script>
+    <script type="text/javascript" src="~/Content/assets/js/pages/components_modals.js"></script>
+    
+    <!-- /theme JS files -->
+
+    @RenderSection("scripts", required: false)
+    @{ Html.RenderPartial("_Modal"); }
+
+</body>
+</html>
