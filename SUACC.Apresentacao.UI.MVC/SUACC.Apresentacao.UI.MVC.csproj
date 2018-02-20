@@ -231,6 +231,7 @@
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\OcorrenciaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -2736,6 +2737,7 @@
     <Folder Include="Views\Atividade\" />
     <Folder Include="Views\Base\" />
     <Folder Include="Views\Cliente\" />
+    <Folder Include="Views\Ocorrencia\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
