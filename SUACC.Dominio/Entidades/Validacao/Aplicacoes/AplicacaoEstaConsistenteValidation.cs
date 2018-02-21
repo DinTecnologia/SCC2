@@ -1,4 +1,4 @@
-﻿using SUACC.Dominio.Entidades.Especificacao.Aplicacaoes;
+﻿using SUACC.Dominio.Entidades.Especificacao.Aplicacoes;
 using SUACC.Dominio.Validacoes;
 
 namespace SUACC.Dominio.Entidades.Validacao.Aplicacaoes

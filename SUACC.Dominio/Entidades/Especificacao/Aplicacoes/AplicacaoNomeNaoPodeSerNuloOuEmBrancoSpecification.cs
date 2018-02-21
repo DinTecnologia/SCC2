@@ -1,13 +1,12 @@
 ﻿using SUACC.Dominio.Interfaces.Especificacoes;
-using System;
 
-namespace SUACC.Dominio.Entidades.Especificacao.Aplicacaoes
+namespace SUACC.Dominio.Entidades.Especificacao.Aplicacoes
 {
     public class AplicacaoNomeNaoPodeSerNuloOuEmBrancoSpecification : ISpecification<Aplicacao>
     {
         public bool IsSatisfiedBy(Aplicacao entidade)
         {
-            return !String.IsNullOrEmpty(entidade.Nome) && !String.IsNullOrWhiteSpace(entidade.Nome);
+            return !string.IsNullOrEmpty(entidade.Nome) && !string.IsNullOrWhiteSpace(entidade.Nome);
         }
     }
 }

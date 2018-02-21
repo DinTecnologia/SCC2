@@ -26,13 +26,11 @@ namespace SUACC.Infra.Contexto
 
         public void Commit()
         {
-            if (Transaction != null)
-            {
-                Transaction.Commit();
-                Transaction.Dispose();
-                Transaction = null;
-            }
+            if (Transaction == null) return;
 
+            Transaction.Commit();
+            Transaction.Dispose();
+            Transaction = null;
         }
 
         public void Rollback()

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using SUACC.Dominio.Entidades;
 using SUACC.Dominio.Interfaces.Repositorio;
 using SUACC.Dominio.Interfaces.Servicos;
@@ -10,6 +11,11 @@ namespace SUACC.Dominio.Servicos
         public EntidadeCampoValorServico(IEntidadeCampoValorRepositorio repositorio) : base(repositorio)
         {
 
+        }
+
+        public IEnumerable<EntidadeCampoValor> ObterPor(int? entidadeId, string nomeCampo, bool? padrao)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

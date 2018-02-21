@@ -167,6 +167,10 @@ namespace SUACC.Infra.CrossCutting.IoC
 
             container.Register<IUsuarioTelefoniaServico, UsuarioTelefoniaServico>(Lifestyle.Singleton);
             container.Register<IUsuarioTelefoniaRepositorio, UsuarioTelefoniaRepositorio>(Lifestyle.Singleton);
+
+            container.Register<IConfiguracaoAppServico, ConfiguracaoAppServico>(Lifestyle.Singleton);
+            container.Register<IAtendimentoAppServico, AtendimentoAppServico>(Lifestyle.Singleton);
+
         }
     }
 }

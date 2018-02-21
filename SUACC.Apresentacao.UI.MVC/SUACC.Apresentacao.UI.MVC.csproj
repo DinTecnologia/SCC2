@@ -226,6 +226,7 @@
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AplicacaoController.cs" />
+    <Compile Include="Controllers\AtendimentoController.cs" />
     <Compile Include="Controllers\AtividadeController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
@@ -2729,6 +2730,7 @@
     <Content Include="Views\Aplicacao\Index.cshtml" />
     <Content Include="Views\Shared\_DadosUsuario.cshtml" />
     <Content Include="Views\Shared\_MenuEsquerdo.cshtml" />
+    <Content Include="Views\Atendimento\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

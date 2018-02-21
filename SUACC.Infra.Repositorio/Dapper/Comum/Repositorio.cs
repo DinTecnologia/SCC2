@@ -3,6 +3,8 @@ using SUACC.Infra.Contexto.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
+using Dapper;
 using DapperExtensions;
 using SUACC.Infra.Contexto.Mapeamento;
 
@@ -20,8 +22,9 @@ namespace SUACC.Infra.Repositorio.Dapper.Comum
 
         public static void InicializaMapperDapper()
         {
-            DapperExtensions.DapperExtensions.SetMappingAssemblies(new[] { typeof(AplicacaoMapper).Assembly });
-            //DapperExtensions.DapperExtensions.SetMappingAssemblies(new[] { typeof(ProdutoMapper).Assembly });
+            DapperExtensions.DapperExtensions.SetMappingAssemblies(new[] {typeof(AplicacaoMapper).Assembly});
+            DapperExtensions.DapperExtensions.SetMappingAssemblies(new[] {typeof(UsuarioCampanhaMapper).Assembly});
+            DapperExtensions.DapperExtensions.SetMappingAssemblies(new[] {typeof(AtendimentoMapper).Assembly});
         }
 
         public dynamic Adicionar(TEntity entity, IDbTransaction transaction = null, int? commandTimeout = null)
@@ -52,6 +55,11 @@ namespace SUACC.Infra.Repositorio.Dapper.Comum
         public IEnumerable<TEntity> ObterPor(object @where = null, object order = null, IDbTransaction transaction = null, int? commandTimeout = null)
         {
             return Conn.GetList<TEntity>(@where);
+        }
+
+        public IEnumerable<TEntity> ObterPorProcedimento(string nomeProcedimento, DynamicParameters parametros)
+        {
+            return Conn.Query<TEntity>(nomeProcedimento, parametros, commandType: CommandType.StoredProcedure).ToList();
         }
 
         public void Dispose()

@@ -5,11 +5,11 @@ using SUACC.Dominio.Servicos.Comum;
 
 namespace SUACC.Dominio.Servicos
 {
-    //public class AtividadeTipoServico : Servico<AtividadeTipo>, IAtividadeTipoServico
-    //{
-    //    public AtividadeTipoServico(IAtividadeTipoRepositorio repositorio) : base(repositorio)
-    //    {
+    public class AtividadeTipoServico : Servico<AtividadeTipo>, IAtividadeTipoServico
+    {
+        public AtividadeTipoServico(IAtividadeTipoRepositorio repositorio) : base(repositorio)
+        {
 
-    //    }
-    //}
+        }
+    }
 }

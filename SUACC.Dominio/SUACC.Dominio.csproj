@@ -30,6 +30,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Dapper, Version=1.50.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.50.4\lib\net451\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="DapperExtensions, Version=1.6.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DapperExtensions.1.6.3\lib\net45\DapperExtensions.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -74,6 +80,14 @@
     <Compile Include="Entidades\EntidadeSecaoAbaCampoDinamico.cs" />
     <Compile Include="Entidades\EntidadeSecao.cs" />
     <Compile Include="Entidades\Especificacao\Aplicacoes\AplicacaoNomeNaoPodeSerNuloOuEmBrancoSpecification.cs" />
+    <Compile Include="Entidades\Especificacao\Atendimentos\AtendimentoCanalIdNaoPodeSerZeroEspecificacao.cs" />
+    <Compile Include="Entidades\Especificacao\Atendimentos\AtendimentoCriadoPorNaoPodeSerNuloOuEmBrancoEspecificacao.cs" />
+    <Compile Include="Entidades\Especificacao\Atividades\AtividadeCanalIdNaoPodeSerZeroEspecificacao.cs" />
+    <Compile Include="Entidades\Especificacao\Atividades\AtividadeClassificacaoIdNaoPodeSerNuloOuEmBrancoEspecificacao.cs" />
+    <Compile Include="Entidades\Especificacao\Atividades\AtividadeTipoIdNaoPodeSerZeroEspecificacao.cs" />
+    <Compile Include="Entidades\Especificacao\Ligacoes\LigacaoCanalNaoPodeSerNuloEspecificacao.cs" />
+    <Compile Include="Entidades\Especificacao\Telefones\TelefoneStatusIdNaoPodeSerZeroEspecificacao.cs" />
+    <Compile Include="Entidades\Especificacao\Telefones\TelefoneTipoIdNaoPodeSerZeroEspecificacao.cs" />
     <Compile Include="Entidades\Fila.cs" />
     <Compile Include="Entidades\FilaAtividade.cs" />
     <Compile Include="Entidades\Funcionalidade.cs" />
@@ -94,7 +108,15 @@
     <Compile Include="Entidades\UsuarioPausa.cs" />
     <Compile Include="Entidades\UsuarioTelefonia.cs" />
     <Compile Include="Entidades\Validacao\Aplicacoes\AplicacaoEstaConsistenteValidation.cs" />
-    <Compile Include="Entidades\ValuesObject\Canal.cs" />
+    <Compile Include="Entidades\Validacao\Atendimentos\AtendimentoEstaConsistenteValidacao.cs" />
+    <Compile Include="Entidades\Validacao\Atividades\AtividadeEstaConsistenteValidacao.cs" />
+    <Compile Include="Entidades\Validacao\Ligacoes\LigacaoEstaConsistenteValidacao.cs" />
+    <Compile Include="Entidades\Validacao\Telefones\TelefoneEstaConsistenteValidacao.cs" />
+    <Compile Include="Entidades\ValuesObject\AtividadeTipoEnum.cs" />
+    <Compile Include="Entidades\ValuesObject\CanalEnum.cs" />
+    <Compile Include="Entidades\ValuesObject\EntidadeEnum.cs" />
+    <Compile Include="Entidades\ValuesObject\StatusTelefoneEnum.cs" />
+    <Compile Include="Entidades\ValuesObject\TipoTelefoneEnum.cs" />
     <Compile Include="Interfaces\Especificacoes\ISpecification.cs" />
     <Compile Include="Interfaces\Repositorio\IAreaRepositorio.cs" />
     <Compile Include="Interfaces\Repositorio\IArquivoRepositorio.cs" />
@@ -264,6 +286,8 @@
     <Compile Include="Validacoes\ValidationResult.cs" />
     <Compile Include="Validacoes\ValidationRule.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

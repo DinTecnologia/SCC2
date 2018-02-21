@@ -5,5 +5,6 @@ namespace SUACC.Aplicacao.Interfaces
     public interface IAtendimentoAppServico
     {
         AtendimentoCadastroViewModel Adicionar(AtendimentoCadastroViewModel atendimentoCadastroViewModel);
+        AtendimentoCadastroViewModel NovaLigacaoReceptiva(AtendimentoCadastroViewModel atendimentoCadastroViewModel);
     }
 }

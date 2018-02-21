@@ -1,32 +1,49 @@
 using System;
+using SUACC.Dominio.Entidades.Validacao.Ligacoes;
+using SUACC.Dominio.Entidades.ValuesObject;
+using SUACC.Dominio.Validacoes;
 
 namespace SUACC.Dominio.Entidades
 {
-    public partial class Ligacao : Atividade
+    public class Ligacao : Atividade
     {
         public Ligacao()
         {
             Id = Guid.NewGuid().ToString();
-            AtividadeTipoId = (int)AtividadeTipo.Ligacao;
+            AtividadeTipoId = (int) AtividadeTipoEnum.Ligacao;
             CriadoEm = DateTime.Now;
+            ValidationResult = new ValidationResult();
+            CanalId = (int) CanalEnum.Telefonico;
         }
 
-
-        //public string Id { get; set; }
-        //public long Identidade { get; set; }
         public string AtividadeId { get; set; }
-        //public string ClienteId { get; set; }
         public string TelefoneId { get; set; }
         public int TotalTentativaCliente { get; set; }
         public int TotalTentativaTelefone { get; set; }
-        //public System.DateTime CriadoEm { get; set; }
-        //public string CriadoPor { get; set; }
-        // public ValidationResult ValidationResult { get; private set; }
+        public string Direcao { get; set; }
 
+        public void SetLigacaoAtiva()
+        {
+            Direcao = "S";
+        }
+        public void SetLigacaoReceptiva()
+        {
+            Direcao = "E";
+        }
 
-        //public virtual AspNetUser AspNetUser { get; set; }
-        //public virtual Atividade Atividade { get; set; }
-        //public virtual Cliente Cliente { get; set; }
-        //public virtual Telefone Telefone { get; set; }
+        /// <summary>
+        /// Retorno da Validação
+        /// </summary>
+        public override bool IsValid
+        {
+            get
+            {
+                if (!base.IsValid)
+                    return false;
+
+                ValidationResult = new LigacaoEstaConsistenteValidacao().Valid(this);
+                return ValidationResult.IsValid;
+            }
+        }
     }
 }

@@ -1,4 +1,4 @@
-﻿using System.Data;
+﻿using System;
 using System.Linq;
 using SUACC.Dominio.Entidades;
 using SUACC.Dominio.Interfaces.Repositorio;
@@ -10,30 +10,57 @@ namespace SUACC.Dominio.Servicos
 {
     public class AtendimentoServico : Servico<Atendimento>, IAtendimentoServico
     {
-        IClassificacaoServico _classificacaoServico;
+        private readonly IAtendimentoRepositorio _repositorio;
+        private readonly IUsuarioCampanhaServico _usuarioCampanhaServico;
 
-        public AtendimentoServico(IAtendimentoRepositorio repositorio, IClassificacaoServico classificacaoServico) : base(repositorio)
+        public AtendimentoServico(IAtendimentoRepositorio repositorio, IUsuarioCampanhaServico usuarioCampanhaServico)
+            : base(repositorio)
         {
-            _classificacaoServico = classificacaoServico;
+            _repositorio = repositorio;
+            _usuarioCampanhaServico = usuarioCampanhaServico;
         }
 
-        public override ValidationResult Adicionar(Atendimento entity, IDbTransaction transaction = null, int? commandTimeout = null)
+        public Atendimento GerarEntidade(string usuarioId, int canalId, string protocolo, long? campanhaId)
         {
+            var retorno = new Atendimento()
+            {
+                Id = Guid.NewGuid().ToString(),
+                CriadoEm = DateTime.Now,
+                CriadoPor = usuarioId,
+                CanalId = canalId,
+                CampanhaId = campanhaId,
+                Protocolo =  protocolo
+            };
 
-            //if (entity.Telefones.Any())
-            //{
-            //    var retornoNovoTelefone = _telefoneServico.Adicionar(entity.Telefones.FirstOrDefault(), transaction, commandTimeout);
+            //Gerando Protocolo Provisório, ao inserir é gerado um último real
+            if (string.IsNullOrEmpty(protocolo))
+            {
+                protocolo = _repositorio.ObterNovoProtocolo(canalId);
 
-            //    if(retornoNovoTelefone.IsValid)
-            //        entity.
+                if (string.IsNullOrEmpty(protocolo))
+                {
+                    retorno.ValidationResult.Add(new ValidationError("Problome ao gerar Protocolo de Atendimento."));
+                    return retorno;
+                }
 
-            //}
+                retorno.Protocolo = protocolo;
+            }
 
+            if (campanhaId.HasValue) return retorno;
 
+            //Caso o operador esteja vinculado somente a uma campanha, já é setado automaticamente, quando ele possuir + que uma deverá setar no Front
+            var usuarioCampanhas = _usuarioCampanhaServico.ObterPor(usuarioId, null);
+            if (!usuarioCampanhas.Any())
+            {
+                retorno.ValidationResult.Add(new ValidationError("Usuário não possui Campanhas Vinculadas a ele"));
+                return retorno;
+            }
 
-            return base.Adicionar(entity, transaction, commandTimeout);
+            if (usuarioCampanhas.Count() == 1)
+                retorno.CampanhaId = usuarioCampanhas.FirstOrDefault().Id;
+
+            return retorno;
         }
     }
-
 }
 
