@@ -3,8 +3,8 @@ using SUACC.Dominio.Interfaces.Servicos.Comum;
 
 namespace SUACC.Dominio.Interfaces.Servicos
 {
-    public interface IAtividadeTipoServico : IServico<AtividadeTipo>
-    {
+    //public interface IAtividadeTipoServico : IServico<AtividadeTipo>
+    //{
 
-    }
+    //}
 }

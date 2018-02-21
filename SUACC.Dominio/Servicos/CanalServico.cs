@@ -5,11 +5,11 @@ using SUACC.Dominio.Servicos.Comum;
 
 namespace SUACC.Dominio.Servicos
 {
-    public class CanalServico : Servico<Canal>, ICanalServico
-    {
-        public CanalServico(ICanalRepositorio repositorio) : base(repositorio)
-        {
+    //public class CanalServico : Servico<Canal>, ICanalServico
+    //{
+    //    public CanalServico(ICanalRepositorio repositorio) : base(repositorio)
+    //    {
 
-        }
-    }
+    //    }
+    //}
 }

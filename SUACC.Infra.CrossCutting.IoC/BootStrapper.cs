@@ -51,8 +51,8 @@ namespace SUACC.Infra.CrossCutting.IoC
             container.Register<IAtividadeEnvolvidoServico, AtividadeEnvolvidoServico>(Lifestyle.Singleton);
             container.Register<IAtividadeEnvolvidoRepositorio, AtividadeEnvolvidoRepositorio>(Lifestyle.Singleton);
 
-            container.Register<IAtividadeTipoServico, AtividadeTipoServico>(Lifestyle.Singleton);
-            container.Register<IAtividadeTipoRepositorio, AtividadeTipoRepositorio>(Lifestyle.Singleton);
+            //container.Register<IAtividadeTipoServico, AtividadeTipoServico>(Lifestyle.Singleton);
+            //container.Register<IAtividadeTipoRepositorio, AtividadeTipoRepositorio>(Lifestyle.Singleton);
 
             container.Register<ICampanhaServico, CampanhaServico>(Lifestyle.Singleton);
             container.Register<ICampanhaRepositorio, CampanhaRepositorio>(Lifestyle.Singleton);
@@ -66,8 +66,8 @@ namespace SUACC.Infra.CrossCutting.IoC
             container.Register<ICampoDinamicoPreenchidoServico, CampoDinamicoPreenchidoServico>(Lifestyle.Singleton);
             container.Register<ICampoDinamicoPreenchidoRepositorio, CampoDinamicoPreenchidoRepositorio>(Lifestyle.Singleton);
 
-            container.Register<ICanalServico, CanalServico>(Lifestyle.Singleton);
-            container.Register<ICanalRepositorio, CanalRepositorio>(Lifestyle.Singleton);
+            //container.Register<ICanalServico, CanalServico>(Lifestyle.Singleton);
+            //container.Register<ICanalRepositorio, CanalRepositorio>(Lifestyle.Singleton);
 
             container.Register<ICidadeServico, CidadeServico>(Lifestyle.Singleton);
             container.Register<ICidadeRepositorio, CidadeRepositorio>(Lifestyle.Singleton);

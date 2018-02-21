@@ -21,7 +21,7 @@ namespace SUACC.Dominio.Servicos.Comum
             get { return _validationResult; }
         }
 
-        public ValidationResult Adicionar(TEntity entity, IDbTransaction transaction = null, int? commandTimeout = default(int?))
+        public virtual ValidationResult Adicionar(TEntity entity, IDbTransaction transaction = null, int? commandTimeout = default(int?))
         {
             if (!_validationResult.IsValid)
                 return ValidationResult;
@@ -36,7 +36,7 @@ namespace SUACC.Dominio.Servicos.Comum
             return _validationResult;
         }
 
-        public ValidationResult Atualizar(TEntity entity, IDbTransaction transaction = null, int? commandTimeout = default(int?))
+        public virtual ValidationResult Atualizar(TEntity entity, IDbTransaction transaction = null, int? commandTimeout = default(int?))
         {
             if (!ValidationResult.IsValid)
                 return ValidationResult;
@@ -51,7 +51,7 @@ namespace SUACC.Dominio.Servicos.Comum
             return _validationResult;
         }
 
-        public ValidationResult Deletar(TEntity entity, IDbTransaction transaction = null, int? commandTimeout = default(int?))
+        public virtual ValidationResult Deletar(TEntity entity, IDbTransaction transaction = null, int? commandTimeout = default(int?))
         {
             if (!ValidationResult.IsValid)
                 return ValidationResult;
@@ -62,17 +62,17 @@ namespace SUACC.Dominio.Servicos.Comum
             return _validationResult;
         }
 
-        public TEntity ObterPorId(int id, IDbTransaction transaction = null, int? commandTimeout = null)
+        public virtual TEntity ObterPorId(int id, IDbTransaction transaction = null, int? commandTimeout = null)
         {
             return _repositorio.ObterPorId(id);
         }
 
-        public IEnumerable<TEntity> ObterTodos(IDbTransaction transaction = null, int? commandTimeout = null)
+        public virtual IEnumerable<TEntity> ObterTodos(IDbTransaction transaction = null, int? commandTimeout = null)
         {
             return _repositorio.ObterTodos();
         }
 
-        public IEnumerable<TEntity> ObterPor(object @where = null, object order = null, IDbTransaction transaction = null, int? commandTimeout = null)
+        public virtual IEnumerable<TEntity> ObterPor(object @where = null, object order = null, IDbTransaction transaction = null, int? commandTimeout = null)
         {
             return _repositorio.ObterPor(@where);
         }

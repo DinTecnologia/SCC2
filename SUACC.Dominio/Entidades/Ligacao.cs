@@ -1,17 +1,14 @@
-using SUACC.Dominio.Validacoes;
 using System;
-using System.Collections.Generic;
-
 
 namespace SUACC.Dominio.Entidades
-{    
-    
+{
     public partial class Ligacao : Atividade
     {
-
         public Ligacao()
         {
-
+            Id = Guid.NewGuid().ToString();
+            AtividadeTipoId = (int)AtividadeTipo.Ligacao;
+            CriadoEm = DateTime.Now;
         }
 
 

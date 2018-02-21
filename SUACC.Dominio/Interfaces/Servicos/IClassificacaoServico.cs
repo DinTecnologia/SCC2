@@ -5,6 +5,7 @@ namespace SUACC.Dominio.Interfaces.Servicos
 {    
     public interface IClassificacaoServico : IServico<Classificacao>
     {
-        
+        Classificacao ObterClassificacaoPadraoLigacao();
+
     }
 }

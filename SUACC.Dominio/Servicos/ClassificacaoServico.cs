@@ -11,5 +11,10 @@ namespace SUACC.Dominio.Servicos
         {
 
         }
+
+        public Classificacao ObterClassificacaoPadraoLigacao()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

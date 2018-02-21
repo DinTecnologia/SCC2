@@ -3,8 +3,8 @@ using SUACC.Dominio.Interfaces.Repositorio.Comum;
 
 namespace SUACC.Dominio.Interfaces.Repositorio
 {
-    public interface IAtividadeTipoRepositorio : IServico<AtividadeTipo>
-    {
+    //public interface IAtividadeTipoRepositorio : IServico<AtividadeTipo>
+    //{
 
-    }
+    //}
 }
