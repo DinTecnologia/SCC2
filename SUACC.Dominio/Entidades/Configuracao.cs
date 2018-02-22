@@ -3,15 +3,14 @@ using System;
 
 namespace SUACC.Dominio.Entidades
 {
-    public partial class Configuracao
+    public class Configuracao
     {
         public Configuracao()
         {
-
+            ValidationResult = new ValidationResult();
         }
 
-        public string Id { get; set; }
-        public int Identidade { get; set; }
+        public int Id { get; set; }
         public string Sigla { get; set; }
         public string Descricao { get; set; }
         public string Valor { get; set; }

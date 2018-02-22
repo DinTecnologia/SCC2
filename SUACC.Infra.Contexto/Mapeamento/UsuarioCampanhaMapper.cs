@@ -7,7 +7,7 @@ namespace SUACC.Infra.Contexto.Mapeamento
     {
         public UsuarioCampanhaMapper()
         {
-            Table("UsuarioCampanha");
+            Table("UsuarioCampanhas");
             Map(p => p.Id).Column("Id");
             Map(p => p.UsuarioId).Column("UsuarioId");
             Map(p => p.CampanhaId).Column("CampanhaId");

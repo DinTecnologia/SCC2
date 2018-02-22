@@ -17,9 +17,9 @@ namespace SUACC.Dominio.Entidades
         public long Identidade { get; set; }
         public string Nome { get; set; }
         public string Descricao { get; set; }
-        public string EntidadeNomeLogicos { get; set; }
+        public string EntidadeIds { get; set; }
         public string AtividadeTipoIds { get; set; }
-        public string EntidadeNomeLogicosPadrao { get; set; }
+        public string EntidadeIdsPadrao { get; set; }
         public string AtividadeTipoIdsPadrao { get; set; }
         public string Direcao { get; set; }
         public bool Finalizadora { get; set; }

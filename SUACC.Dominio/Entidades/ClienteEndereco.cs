@@ -3,12 +3,11 @@ using System;
 
 namespace SUACC.Dominio.Entidades
 {
-    public partial class ClienteEndereco
+    public class ClienteEndereco
     {
-        public string Id { get; set; }
-        public long Identidade { get; set; }
+        public long Id { get; set; }
         public string ClienteId { get; set; }
-        public string TipoEntidadeCampoValorId { get; set; }
+        public int TipoEntidadeCampoValorId { get; set; }
         public string Cep { get; set; }
         public string Logradouro { get; set; }
         public int? CidadeId { get; set; }

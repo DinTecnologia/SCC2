@@ -17,8 +17,7 @@ namespace SUACC.Dominio.Entidades
             Telefones1 = new HashSet<Telefone>();
         }
 
-        public string Id { get; set; }
-        public long Identidade { get; set; }
+        public int Id { get; set; }
         public int EntidadeId { get; set; }
         public string NomeCampo { get; set; }
         public string Valor { get; set; }

@@ -15,8 +15,8 @@ namespace SUACC.Infra.Contexto.Mapeamento
             Map(p => p.CampanhaId).Column("CampanhaId");
             Map(p => p.CriadoPor).Column("CriadoPor");
             Map(p => p.CriadoEm).Column("CriadoEm");
-            Map(p => p.FinalizadoPor).Column("FinalizadoPor");
             Map(p => p.FinalizadoEm).Column("FinalizadoEm");
+            Map(p => p.FinalizadoPor).Column("FinalizadoPor");
         }
     }
 }
