@@ -1981,12 +1981,15 @@ input[class*=bg-] + .form-control-feedback {
   -moz-osx-font-smoothing: grayscale;
 }
 .dropdown-menu {
-  min-width: 180px;
-  padding: 7px 0;
-  color: #333333;
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    min-width: 180px;
+    padding: 7px 0;
+    color: #f0ffff;
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    background-color: #355D86;
+    font-size: 11px;
 }
+
 .dropdown-menu .divider {
   margin: 7px 0;
 }
@@ -1997,12 +2000,14 @@ input[class*=bg-] + .form-control-feedback {
 .dropdown-menu > li:last-child {
   margin-bottom: 0;
 }
-.dropdown-menu > li > a {
-  padding: 8px 15px;
-  outline: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
+    .dropdown-menu > li > a {
+        padding: 8px 15px;
+        outline: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: white;
+        
+    }
 .dropdown-menu > li > a > i,
 .dropdown-menu > .dropdown-header > i,
 .dropdown-menu > li > a > img,
@@ -2041,21 +2046,21 @@ input[class*=bg-] + .form-control-feedback {
 .dropdown-menu > li > label:focus {
   text-decoration: none;
   color: #333333;
-  background-color: #f5f5f5;
+  background-color: red;
 }
-.dropdown-menu > .active > label,
-.dropdown-menu > .active > label:hover,
-.dropdown-menu > .active > label:focus {
-  color: #fff;
-  outline: 0;
-  background-color: #2196F3;
-}
-.dropdown-menu > .disabled > label,
-.dropdown-menu > .disabled > label:hover,
-.dropdown-menu > .disabled > label:focus {
-  background-color: transparent;
-  color: #999999;
-}
+    .dropdown-menu > .active > label,
+    .dropdown-menu > .active > label:hover,
+    .dropdown-menu > .active > label:focus {
+        color: #fff;
+        outline: 0;
+        background-color: red;
+    }
+    .dropdown-menu > .disabled > label,
+    .dropdown-menu > .disabled > label:hover,
+    .dropdown-menu > .disabled > label:focus {
+        background-color: red;
+        color: #999999;
+    }
 .dropdown-menu > li > label {
   padding: 8px 15px;
   padding-left: 43px;
@@ -3750,8 +3755,9 @@ li + .dropdown-header.highlight,
   }
 }
 .navbar-inverse {
-  border-bottom-color: rgba(255, 255, 255, 0.1);
-  color: #fff;
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    background-color: #355D86;
 }
 .navbar-inverse .navbar-collapse {
   border-color: rgba(0, 0, 0, 0.2);
