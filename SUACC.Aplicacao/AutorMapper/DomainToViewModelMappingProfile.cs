@@ -9,6 +9,7 @@ namespace SUACC.Aplicacao.AutorMapper
         public DomainToViewModelMappingProfile()
         {
             CreateMap<Atendimento, AtendimentoCadastroViewModel>();
+            CreateMap<Menu, MenuItemViewModel>();
         }
     }
 }

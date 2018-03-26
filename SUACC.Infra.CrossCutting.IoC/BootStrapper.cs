@@ -16,6 +16,7 @@ namespace SUACC.Infra.CrossCutting.IoC
         {
             container.Register<IUnitOfWork, UnitOfWork>(Lifestyle.Singleton);
             container.Register<IDapperContexto, DapperContexto>(Lifestyle.Singleton);
+            container.Register<IBaseAppServico, BaseAppServico>(Lifestyle.Singleton);
 
             container.Register<IAplicacaoAppServico, AplicacaoAppServico>(Lifestyle.Singleton);
             container.Register<IAplicacaoServico, AplicacaoServico>(Lifestyle.Singleton);

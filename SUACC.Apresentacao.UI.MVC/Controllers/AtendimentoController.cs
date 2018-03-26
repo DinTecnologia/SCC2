@@ -17,6 +17,7 @@ namespace SUACC.Apresentacao.UI.MVC.Controllers
         // GET: Atendimento
         public ActionResult Index()
         {
+            var teste = CarregarMenu();
             return View();
         }
 

@@ -6,11 +6,11 @@ using System.Web.Mvc;
 
 namespace SUACC.Apresentacao.UI.MVC.Areas.Admin.Controllers
 {
-    public class HomeController : Controller
+    public class UsuarioController : Controller
     {
-        // GET: Admin/Home
+        // GET: Admin/Usuario
         public ActionResult Index()
-        {            
+        {
             return View();
         }
     }

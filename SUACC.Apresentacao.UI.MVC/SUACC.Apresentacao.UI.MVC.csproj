@@ -224,6 +224,7 @@
     <Compile Include="Areas\Admin\Controllers\AdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\AplicacaoController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\UsuarioController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AplicacaoController.cs" />
     <Compile Include="Controllers\AtendimentoController.cs" />
@@ -2682,6 +2683,7 @@
     <Content Include="Areas\Admin\Views\Aplicacao\_Adicionar.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_Modal.cshtml" />
     <Content Include="Areas\Admin\Views\Aplicacao\_Lista.cshtml" />
+    <Content Include="Areas\Admin\Views\Usuario\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

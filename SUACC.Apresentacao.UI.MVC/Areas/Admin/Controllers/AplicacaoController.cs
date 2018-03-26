@@ -17,6 +17,7 @@ namespace SUACC.Apresentacao.UI.MVC.Areas.Admin.Controllers
         // GET: Admin/Aplicacao
         public ActionResult Index()
         {
+            var teste = CarregarMenu();
             return View();
         }
 

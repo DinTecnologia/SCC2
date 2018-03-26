@@ -58,5 +58,10 @@ namespace SUACC.Apresentacao.UI.MVC.Areas.Admin.Controllers
 
             return mensagemErro;
         }
+
+        public string CarregarMenu()
+        {
+            return System.Reflection.Assembly.GetExecutingAssembly().EntryPoint.DeclaringType.Namespace;
+        }
     }
 }
